@@ -1,0 +1,121 @@
+ui_print(" ");
+set_progress(0.00);
+ui_print(" ");
+ui_print(" ");
+ui_print("********************************************** ");
+ui_print("     ____       _      __                      ");
+ui_print("    / __ \_____(_)____/ /_                     ");
+ui_print("   / /_/ / ___/ / ___/ __ \                    ");
+ui_print("  / ____/ /  / (__  ) / / /                    ");
+ui_print(" /_/   /_/  /_/____/_/ /_/                     ");
+ui_print("                         __                    ");
+ui_print("    ____ ___  ____  ____/ /____                ");
+ui_print("   / __ `__ \/ __ \/ __  / ___/                ");
+ui_print("  / / / / / / /_/ / /_/ (__  )                 ");
+ui_print(" /_/ /_/ /_/\____/\__,_/____/                  ");
+ui_print("                                               ");
+ui_print("                          - BY neel0210 @xda");
+ui_print("***********************************************");
+ui_print(" Devices  : EXYNOS 7870,7904 AND 7885 DEVICES FOR NOW");
+ui_print(" MODE     : CAMERA MOD V2 BY NEEL0210");
+ui_print(" CREDITS  : @ASTRAKO @DAVINASH97 @xpirt at XDA ");
+ui_print("***********************************************");
+#-- Unmounting
+ifelse(is_mounted("/system"), unmount("/system"));
+ifelse(is_mounted("/vendor"), unmount("/vendor"));
+set_progress(0.30);
+#-- Mounting 
+ui_print(" ");
+ui_print("-- Mounting system & vendor");
+ui_print(" ");
+ifelse(is_mounted("/system"), "", mount("ext4", "EMMC", "/dev/block/platform/13540000.dwmmc0/by-name/SYSTEM", "/system"));
+ifelse(is_mounted("/vendor"), "", mount("ext4", "EMMC", "/dev/block/platform/13540000.dwmmc0/by-name/VENDOR", "/vendor"));
+#-- removing old
+ui_print("-- REMOVING OLD AND ADDING NEW CAMERA FEATURES");
+run_program("/sbin/mount", "-t", "auto", "/system");
+run_program("/sbin/rm", "-rf", "system/system/cameradata/camerafeatures.xml");
+ui_print(" ");
+#-- Identifying device
+ui_print("-- Detecting phone variant:");
+sleep(2);
+#-- 7870
+	if is_substring("A320", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- A320 detected");
+		package_extract_dir("PRISH/device/a3y17lte/system", "/system");
+	endif;
+	if is_substring("G610", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- G610 detected");
+		package_extract_dir("PRISH/device/7870/on7xelte/system", "/system");
+	endif;
+	if is_substring("J530", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- J530 detected");
+		package_extract_dir("PRISH/device/7870/j5y17lte/system", "/system");
+	endif;
+	if is_substring("J701", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- J701 detected");
+		package_extract_dir("PRISH/device/7870/j7velte/system", "/system");
+	endif;
+	if is_substring("J710", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- J710 detected");
+		package_extract_dir("PRISH/device/7870/j7xelte/system", "/system");
+	endif;
+	if is_substring("J730", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- J730 detected");
+		package_extract_dir("PRISH/device/7870/j7y17lte/system", "/system");
+	endif;
+	if is_substring("J600", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- J600 detected");
+		package_extract_dir("PRISH/device/j6lte/system", "/system");
+	endif;
+#-- 7904-7885
+	if is_substring("M305", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- M305 detected");
+		package_extract_dir("PRISH/device/7904/M30/system", "/system");
+	endif;
+    if is_substring("M205", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- M205 detected");
+		package_extract_dir("PRISH/device/7904/M20/system", "/system");
+	endif;
+    	if is_substring("A750", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- A7 detected");
+		package_extract_dir("PRISH/device/7904/A7/system", "/system");
+	endif;
+	if is_substring("A405", getprop("ro.boot.bootloader")) then
+		ui_print(" ");
+		ui_print("---- A405 detected");
+		package_extract_dir("PRISH/device/7904/A40/system", "/system");
+	endif;
+sleep(1);	
+set_progress(0.50);
+ui_print(" ");
+ui_print("-- REMOVING OLD AND ADDING NEW CAMERA FEATURES");
+sleep(1);
+set_progress(0.60);
+#-- SETTING UP SCRIPTS
+# -- place holder
+set_progress(0.70);
+#-- here
+sleep(1);
+ui_print(" ");
+ui_print("-- CAMERA UPDATED");
+ui_print(" ");
+ui_print("-- UNMOUNTING PARTITION");
+ifelse(is_mounted("/system"), unmount("/system"));
+ifelse(is_mounted("/vendor"), unmount("/vendor"));
+ui_print("***************************************************");
+ui_print("*IF YOU'RE USING THIS OR MODDING THIS FOR YOUR ROM*");
+ui_print("*    DO NOT FORGET TO MENTION PROPER CREDITS      *");
+ui_print("***************************************************");
+ui_print(" ");
+ui_print(" ");
+set_progress(1.00);
