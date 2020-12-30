@@ -1,16 +1,21 @@
 <?xml version= "1.0" encoding= "UTF-8"?>
 <resources>
+    
     <!-- Shootingmode -->
-    <local name="SHOOTING_MODE_SINGLE_TAKE_PHOTO" back="SINGLE_TAKE_PHOTO" front="SINGLE_TAKE_PHOTO" enable="true" more="false" order="1" preview-size="1440x1080" capture-size="3264x2448" front-capture-size="2944x2208" info="1" big-info="true"/>
+    <local name="SHOOTING_MODE_LIVE_FOCUS" back="LIVE_FOCUS" front="SELFIE_FOCUS" enable="true" more="false" order="1" info="1"/>
     <local name="SHOOTING_MODE_PHOTO" back="PHOTO" front="PHOTO" enable="true" more="false" order="2"/>
     <local name="SHOOTING_MODE_VIDEO" back="VIDEO" front="VIDEO" enable="true" more="false" order="3"/>
-    <local name="SHOOTING_MODE_LIVE_FOCUS" back="LIVE_FOCUS" front="SELFIE_FOCUS" enable="true" more="false" order="4" info="4"/>
-    <local name="SHOOTING_MODE_HYPER_LAPSE" back="HYPER_LAPSE" enable="true" more="true" order="5" preview-size="1920x1080" capture-size="1920x1080" info="5"/>
-    <local name="SHOOTING_MODE_PRO_LITE" back="PRO_LITE" enable="true" more="true" order="6"/>
-    <local name="SHOOTING_MODE_PANORAMA" back="PANORAMA" enable="true" more="true" order="7" preview-size="1920x1080" capture-size="3264x1836"/>
-    <local name="SHOOTING_MODE_NIGHT" back="NIGHT" front="NIGHT" enable="true" more="true" order="8" info="2"/>
-    <local name="SHOOTING_MODE_SUPER_SLOW_MOTION" back="SUPER_SLOW_MOTION" enable="true" more="true" order="9" preview-size="1280x720" capture-size="1280x720" info="3"/>
-    <local name="SHOOTING_MODE_SLOW_MOTION" back="SLOW_MOTION" enable="true" more="true" order="10" preview-size="1280x720" capture-size="1280x720"/>
+    <local name="SHOOTING_MODE_HYPER_LAPSE" back="HYPER_LAPSE" enable="true" more="true" order="4" preview-size="1920x1080" capture-size="1920x1080" info="4"/>
+    <local name="SHOOTING_MODE_PRO_LITE" back="PRO_LITE" enable="true" more="true" order="5"/>
+    <local name="SHOOTING_MODE_PANORAMA" back="PANORAMA" enable="true" more="true" order="6" preview-size="1920x1080" capture-size="3264x1836"/>
+    <local name="SHOOTING_MODE_NIGHT" back="NIGHT" front="NIGHT" enable="true" more="true" order="7" info="2"/>
+    <local name="SHOOTING_MODE_SUPER_SLOW_MOTION" back="SUPER_SLOW_MOTION" enable="true" more="true" order="8" preview-size="1280x720" capture-size="1280x720" info="3"/>
+    <local name="SHOOTING_MODE_SLOW_MOTION" back="SLOW_MOTION" enable="true" more="true" order="9" preview-size="1280x720" capture-size="1280x720"/>
+    <local name="SHOOTING_MODE_FOOD" back="FOOD" enable="true" more="true" order="10" info="2"/>
+    <local name="SHOOTING_MODE_CONTINUOUS" back="CONTINUOUS" enable="true" more="true" order="11"/>
+    <local name="SHOOTING_MODE_SPORTS" back="SPORTS" enable="true" more="true" order="12s"/>
+    <local name="SHOOTING_MODE_RICH_TONE" back="RICH_TONE" front="RICH_TONE" enable="true" more="true" order="13"/>
+	<local name="SHOOTING_MODE_REAR_SELFIE" back="REAR_SELFIE" enable="true" more="true" order="14"/>
 
     <!-- Capture resolution - BACK -->
     <local name="BACK_CAMERA_RESOLUTION_FULL_RATIO" value="4032x1860" />
