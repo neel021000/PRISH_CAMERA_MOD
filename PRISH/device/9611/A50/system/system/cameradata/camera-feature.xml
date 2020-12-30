@@ -82,6 +82,7 @@
 
     <!-- Quick launch features -->
     <local name="CAMERA_QUICK_LAUNCH_USING_POWER_KEY" value="true"/>
+    <local name="SUPPORT_MY_FILTER" value="true" />
 
     <!-- Multi-camera features -->
     <local name="SUPPORT_BACK_WIDE_NORMAL_DUAL_PORTRAIT" value="true"/>
